@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,7 +12,7 @@ import Question from "../screens/Question";
 export const HomeRoute = "/";
 export const QuestionRoute = "/question";
 
-export default function DrawerNav(props) {
+export default function Routing(props) {
   return (
     <div>
       <Router>
