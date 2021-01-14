@@ -1,13 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Routing from "../src/Router";
-import ExamineeLine from "./components/ExamineeLine";
+import ExamineeList from "./components/ExamineeList";
 
 function App() {
   return (
     <div>
       <Routing />
-      <ExamineeLine />
+      <ExamineeList />
     </div>
   );
 }
