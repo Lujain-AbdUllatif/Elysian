@@ -1,0 +1,20 @@
+.container-header {
+  background-color: rgb(202, 243, 226);
+  width: 70vw;
+  height: 10vh;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.table-header-text {
+  margin: 2rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 2rem;
+}
