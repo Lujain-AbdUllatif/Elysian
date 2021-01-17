@@ -1,0 +1,10 @@
+.tester-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  color: #f5f4f2;
+  background-color: #85c872;
+  border-bottom: solid 3px#285a84;
+  padding: 30px;
+}

@@ -3,9 +3,13 @@ import { IconContext } from "react-icons";
 import { GiMeshNetwork } from "react-icons/gi";
 import { BiChevronsDown } from "react-icons/bi";
 import { RiDeleteBin5Line } from "react-icons/ri";
-import { BsClock } from "react-icons/bs";
+import { BsClock, BsFileEarmarkText } from "react-icons/bs";
 import { FaAward, FaPhotoVideo, FaEye, FaEdit } from "react-icons/fa";
-import { AiFillPlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
+import {
+  AiFillPlusCircle,
+  AiOutlineMinusCircle,
+  AiFillClockCircle,
+} from "react-icons/ai";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 export function NetIcon(props) {
@@ -16,10 +20,26 @@ export function NetIcon(props) {
   );
 }
 
+export function TestIcon(props) {
+  return (
+    <IconContext.Provider value={{ className: props.className }}>
+      <BsFileEarmarkText />
+    </IconContext.Provider>
+  );
+}
+
 export function DeleteIcon(props) {
   return (
     <IconContext.Provider value={{ className: props.className }}>
       <RiDeleteBin5Line />
+    </IconContext.Provider>
+  );
+}
+
+export function ClockIcon(props) {
+  return (
+    <IconContext.Provider value={{ className: props.className }}>
+      <AiFillClockCircle />
     </IconContext.Provider>
   );
 }
