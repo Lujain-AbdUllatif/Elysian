@@ -3,7 +3,7 @@ import "./style.css";
 
 const Button = ({ label, handleClick }) => {
   return (
-    <button className="btn" onClick={handleClick}>
+    <button className="btn-container" onClick={handleClick}>
       {label}
     </button>
   );
