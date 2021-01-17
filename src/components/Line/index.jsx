@@ -1,10 +1,17 @@
 import React from "react";
-import { NetIcon } from "../../icons";
+import { DeleteIcon, ViewIcon, EditIcon } from "../../icons";
 
-export default function Line(props) {
+import "./style.css";
+const Line = (props) => {
   return (
-    <div>
-      <NetIcon />
+    <div className="page-view-line">
+      <h3>{props.text}</h3>
+      <div className="icons-line">
+        <DeleteIcon className="line-icon" />
+        <EditIcon className="line-icon" />
+        <ViewIcon className="line-icon" />
+      </div>
     </div>
   );
-}
+};
+export default Line;

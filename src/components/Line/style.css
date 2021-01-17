@@ -1,0 +1,21 @@
+.page-view-line {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  margin: 30px;
+  background-color: #b1d8a7;
+  color: #515068;
+  border-radius: 12px;
+}
+
+.icons-line {
+  display: flex;
+  justify-content: space-around;
+}
+
+.line-icon {
+  margin: 20px;
+  font-size: 20px;
+}

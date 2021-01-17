@@ -1,10 +1,13 @@
 import React from "react";
 import { IconContext } from "react-icons";
 import { GiMeshNetwork } from "react-icons/gi";
+import { BiChevronsDown } from "react-icons/bi";
+import { RiDeleteBin5Line } from "react-icons/ri";
 import { BsClock } from "react-icons/bs";
-import { FaAward, FaPhotoVideo } from "react-icons/fa";
+import { FaAward, FaPhotoVideo, FaEye, FaEdit } from "react-icons/fa";
 import { AiFillPlusCircle, AiOutlineMinusCircle } from "react-icons/ai";
 import { IoMdArrowDropdown } from "react-icons/io";
+
 export function NetIcon(props) {
   return (
     <IconContext.Provider value={{ className: props.className }}>
@@ -13,6 +16,21 @@ export function NetIcon(props) {
   );
 }
 
+export function DeleteIcon(props) {
+  return (
+    <IconContext.Provider value={{ className: props.className }}>
+      <RiDeleteBin5Line />
+    </IconContext.Provider>
+  );
+}
+
+export function ViewIcon(props) {
+  return (
+    <IconContext.Provider value={{ className: props.className }}>
+      <FaEye />
+    </IconContext.Provider>
+  );
+}
 export function Award(props) {
   return (
     <IconContext.Provider value={{ className: props.className }}>
@@ -28,6 +46,13 @@ export function PicIcon(props) {
   );
 }
 
+export function EditIcon(props) {
+  return (
+    <IconContext.Provider value={{ className: props.className }}>
+      <FaEdit />
+    </IconContext.Provider>
+  );
+}
 export function Clock(props) {
   return (
     <IconContext.Provider value={{ className: props.className }}>
@@ -51,6 +76,14 @@ export function PlusIcon(props) {
       }}
     >
       <AiFillPlusCircle onClick={props.onClick} />
+    </IconContext.Provider>
+  );
+}
+
+export function ScrollIcon(props) {
+  return (
+    <IconContext.Provider value={{ className: props.className }}>
+      <BiChevronsDown />
     </IconContext.Provider>
   );
 }

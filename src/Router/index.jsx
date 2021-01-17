@@ -13,6 +13,8 @@ import Question from "../screens/Question";
 import MakeExercise from "../screens/MakeExercise/index";
 import ExamineeAnswers from "../screens/ExamineeAnswers";
 import Examinees from "../screens/Examinees";
+import ViewExercises from "../screens/ViewExercises";
+import ViewTests from "../screens/ViewTests";
 
 export default function Routing(props) {
   return (
@@ -33,6 +35,12 @@ export default function Routing(props) {
           </Route>
           <Route path="/makeexercise">
             <MakeExercise />
+          </Route>
+          <Route path="/View-Exercises">
+            <ViewExercises />
+          </Route>
+          <Route path="/View-Tests">
+            <ViewTests />
           </Route>
         </Switch>
       </Router>
