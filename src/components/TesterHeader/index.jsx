@@ -4,7 +4,7 @@ import "./style.css";
 export default function TesterHeader({ text }) {
   return (
     <div className="tester-header">
-      <h2>{text}</h2>
+      <h1>{text}</h1>
     </div>
   );
 }

@@ -5,9 +5,9 @@ import "./style.css";
 import { PlusIcon, MinusIcon } from "../../icons/index";
 
 //components imports
-import PicUpload from "../../components/PicUpload/index";
-import Question from "../../components/Question/index";
-
+import PicUpload from "../../components/PicUpload";
+import Question from "../../components/Question";
+import TesterHeader from "../../components/TesterHeader";
 const MakeExercise = () => {
   //states
   const [pics, setPics] = useState("+");
@@ -18,7 +18,7 @@ const MakeExercise = () => {
   };
   return (
     <div className="MakeExercise">
-      <h1 className="title">MakeExercise screen (testing...)</h1>
+      <TesterHeader text="Make Exercise" />
       <input placeholder="Exercise Name..." className="name-input" />
       <h4 className="sub-title">Insert pictures</h4>
       <div className="pic-uploaders-container">
