@@ -6,32 +6,33 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
+
+//screens imports
 import Home from "../screens/Home";
 import Question from "../screens/Question";
+import MakeExercise from "../screens/MakeExercise/index";
 import ExamineeAnswers from "../screens/ExamineeAnswers";
 import Examinees from "../screens/Examinees";
-
-export const HomeRoute = "/";
-export const QuestionRoute = "/question";
-export const ExamineeAnswerRoute = "/answers";
-export const ExamineesRoute = "/examinees";
 
 export default function Routing(props) {
   return (
     <div>
       <Router>
         <Switch>
-          <Route exact path={HomeRoute}>
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path={QuestionRoute}>
+          <Route path="/question">
             <Question />
           </Route>
-          <Route path={ExamineeAnswerRoute}>
+          <Route path="/answers">
             <ExamineeAnswers />
           </Route>
-          <Route path={ExamineesRoute}>
+          <Route path="/examinees">
             <Examinees />
+          </Route>
+          <Route path="/makeexercise">
+            <MakeExercise />
           </Route>
         </Switch>
       </Router>
