@@ -1,9 +1,19 @@
-.Question-forExercise {
+.main-details-exercise {
   background-color: #6aa4c4;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 200px;
+  width: 70%;
+  height: 60%;
+  margin-left: 20px;
+  border-radius: 12px;
+}
+
+.main-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
