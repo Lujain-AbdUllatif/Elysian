@@ -1,0 +1,8 @@
+.View-Exercise-forTest {
+  background-color: #6aa4c4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 100px;
+}

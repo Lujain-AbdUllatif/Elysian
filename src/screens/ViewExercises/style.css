@@ -1,0 +1,9 @@
+.Question-forExercise {
+  background-color: #6aa4c4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 200px;
+}

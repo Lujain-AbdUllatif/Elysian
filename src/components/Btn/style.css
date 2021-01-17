@@ -1,0 +1,10 @@
+.btn-container {
+  width: 150px;
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #5ea669;
+  color: #fff;
+  outline: none;
+  /* height: 4vh; */
+}
