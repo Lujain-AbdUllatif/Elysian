@@ -4,7 +4,13 @@ import { GiMeshNetwork } from "react-icons/gi";
 import { BiChevronsDown } from "react-icons/bi";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { BsClock, BsFileEarmarkText } from "react-icons/bs";
-import { FaAward, FaPhotoVideo, FaEye, FaEdit } from "react-icons/fa";
+import {
+  FaAward,
+  FaPhotoVideo,
+  FaEye,
+  FaEdit,
+  FaCalendarAlt,
+} from "react-icons/fa";
 import {
   AiFillPlusCircle,
   AiOutlineMinusCircle,
