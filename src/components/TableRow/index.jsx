@@ -23,6 +23,21 @@ const TableRow = (props) => {
       img:
         "https://wereallaboutpets.com/wp-content/uploads/2019/12/lovebird-male-names.jpg",
     },
+    {
+      id: 5,
+      img:
+        "https://wereallaboutpets.com/wp-content/uploads/2019/12/lovebird-male-names.jpg",
+    },
+    {
+      id: 6,
+      img:
+        "https://wereallaboutpets.com/wp-content/uploads/2019/12/lovebird-male-names.jpg",
+    },
+    {
+      id: 7,
+      img:
+        "https://wereallaboutpets.com/wp-content/uploads/2019/12/lovebird-male-names.jpg",
+    },
   ];
   const correctImages = [
     {
