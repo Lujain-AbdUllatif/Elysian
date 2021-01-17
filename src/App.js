@@ -9,9 +9,6 @@ function App() {
   return (
     <div>
       <Routing />
-      {/* <ExamineeList /> */}
-      {/* <TableHeader />
-      <TableRow /> */}
     </div>
   );
 }
