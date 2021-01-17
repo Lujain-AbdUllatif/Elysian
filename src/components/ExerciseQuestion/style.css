@@ -1,0 +1,38 @@
+.exercise-question-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+  height: 10vh;
+}
+
+.exercise-question-container span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: aliceblue;
+  background-color: #285a84;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+}
+
+.ex-now {
+  transform: scale(1.5);
+  border: solid 4px #5ea669;
+  font-size: 15px;
+}
+
+.exercise-question-container:after {
+  position: absolute;
+  /* left: 0; */
+  top: 50%;
+  height: 2px;
+  background: #285a84;
+  content: "";
+  width: 100%;
+  /* display: block; */
+  z-index: -1;
+}

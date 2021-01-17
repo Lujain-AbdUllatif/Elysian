@@ -5,13 +5,13 @@ import { TestIcon, ClockIcon } from "../../icons";
 export default function ExamineeHeader(props) {
   return (
     <div className="examinee-header-container">
-      <div className="examinee-header-exercise">
-        <TestIcon />
-        Exercise 1 / 8
+      <div>
+        <TestIcon className="examinee-header-icon" />
+        Exercise {props.ex_now} / {props.ex_all}
       </div>
-      <div className="examinee-header-clock">
-        Time
-        <ClockIcon />
+      <div>
+        {props.time}
+        <ClockIcon className="examinee-header-icon" />
       </div>
     </div>
   );

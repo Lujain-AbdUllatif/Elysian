@@ -8,15 +8,3 @@
   border-bottom: solid 3px#285a84;
   padding: 30px;
 }
-
-.examinee-header-exercise {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.examinee-header-clock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
