@@ -15,7 +15,7 @@ import ExamineeAnswers from "../screens/ExamineeAnswers";
 import Examinees from "../screens/Examinees";
 import ViewExercises from "../screens/ViewExercises";
 import ViewTests from "../screens/ViewTests";
-
+import TesterHome from "../screens/TesterHome";
 export default function Routing(props) {
   return (
     <div>
@@ -41,6 +41,9 @@ export default function Routing(props) {
           </Route>
           <Route path="/view-tests">
             <ViewTests />
+          </Route>
+          <Route path="/tester-home">
+            <TesterHome />
           </Route>
         </Switch>
       </Router>
