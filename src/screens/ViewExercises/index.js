@@ -35,6 +35,7 @@ export default function ViewExercises() {
       {Exercises.map((exercise) => {
         return <Line text={exercise} />;
       })}
+
       <div className="main-details-exercise">
         <div className="main-images">
           {images.map((iamge) => {
@@ -49,7 +50,7 @@ export default function ViewExercises() {
             })}
           </ol>
         </div>
-        <ScrollIcon />
+        <ScrollIcon className="scroll-icon" />
       </div>
     </div>
   );

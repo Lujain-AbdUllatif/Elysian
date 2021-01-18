@@ -10,7 +10,7 @@ import {
 //screens imports
 import Home from "../screens/Home";
 import Question from "../screens/Question";
-import MakeExercise from "../screens/MakeExercise/index";
+import MakeExercise from "../screens/MakeExercise";
 import ExamineeAnswers from "../screens/ExamineeAnswers";
 import Examinees from "../screens/Examinees";
 import ViewExercises from "../screens/ViewExercises";

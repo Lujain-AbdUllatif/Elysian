@@ -1,18 +1,1 @@
-.main-details-Test {
-  /* display: flex;
-  flex-direction: column; */
-  justify-content: space-between;
-  margin-bottom: 3vh;
-  margin-top: 3vh;
-  margin-left: 20%;
-  margin-right: 20%;
-  background-color: #6aa4c4;
-  border-radius: 12px;
-}
-.exercises-for-tests {
-  column-width: 80px;
-}
-.iamges-for-tests {
-  display: flex;
-  justify-content: space-around;
-}
+
