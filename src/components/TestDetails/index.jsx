@@ -2,8 +2,7 @@ import React from "react";
 const TestExercises = (props) => {
   return (
     <div>
-      <h3>{props.text}</h3>
-      <img src={props.src} />
+      <h3>{props.exercise}</h3>
     </div>
   );
 };

@@ -1,9 +1,17 @@
+.Home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .Home .container {
   display: flex;
   justify-content: center;
   column-gap: 170px;
   align-items: center;
-  height: 75vh;
+  border: 7px solid #285a84;
+  width: 1000px;
+  height: 650px;
 }
 
 .Home .container img {
