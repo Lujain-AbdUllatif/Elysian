@@ -1,0 +1,16 @@
+.questionDiv {
+  background-color: darkgrey;
+  font-size: 1.5rem;
+  margin: auto;
+  width: 60rem;
+  min-height: 20vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.questionContent {
+  margin-left: 10rem;
+}
