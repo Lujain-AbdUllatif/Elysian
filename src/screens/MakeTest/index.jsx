@@ -8,15 +8,7 @@ import Button from "../../components/Btn";
 
 const data = [
   {
-    name: "ex1",
-    src: [
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-    ],
-  },
-  {
-    name: "ex2",
+    exNum: "Exercise 1",
     src: [
       "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
       "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
@@ -26,21 +18,33 @@ const data = [
     ],
   },
   {
-    name: "ex3",
+    exNum: "Exercise 2",
+    src: [
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+    ],
+  },
+  {
+    exNum: "Exercise 3",
+    src: [
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+    ],
+  },
+  {
+    exNum: "Exercise 4",
     src: [
       "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
       "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
     ],
   },
   {
-    name: "ex4",
-    src: [
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-    ],
-  },
-  {
-    name: "ex5",
+    exNum: "Exercise 5",
     src: [
       "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
     ],
@@ -53,24 +57,30 @@ export default function MakeTest(props) {
       <TesterHeader text="Make Test" />
       <div className="make-test-inputs">
         <input type="text" placeHolder="Test Name" />
-        <input type="number" placeHolder="Time(min)" />
+        <input type="number" placeHolder="Time(minutes)" />
       </div>
-      {data.map((ex) => {
-        return (
-          <div>
-            <input
-              type="checkbox"
-              id={ex.name}
-              name={ex.name}
-              value={ex.name}
-            />
-            <label for={ex.name}>{ex.name}</label>
-            <div>
-              <ImageSet images={ex.src} />
+      <div className="exercises">
+        {data.map((ex) => {
+          return (
+            <div className="exercise">
+              <div className="check-and-name">
+                <input
+                  type="checkbox"
+                  id={ex.exNum}
+                  name={ex.exNum}
+                  value={ex.exNum}
+                  onChange={(e) => e.target.classList.toggle("green")}
+                />
+                <label for={ex.exNum}>{ex.exNum}</label>
+              </div>
+
+              <div>
+                <ImageSet className="images" images={ex.src} />
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
       <Button label="Make Test" />
     </div>
   );
