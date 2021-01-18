@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import "./style.css";
 //components imports
 import TesterHeader from "../../components/TesterHeader";

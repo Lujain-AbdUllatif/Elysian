@@ -9,13 +9,14 @@ import PicUpload from "../../components/PicUpload";
 import Question from "../../components/Question";
 import TesterHeader from "../../components/TesterHeader";
 const MakeExercise = () => {
-  //states
+  // //states
   const [pics, setPics] = useState("+");
   const [questions, setQuestions] = useState("+");
-  //functions
+  // //functions
   const addPicUploader = () => {
-    setPics((prev) => prev + "+");
+    return setPics((prev) => prev + "+");
   };
+
   return (
     <div className="MakeExercise">
       <TesterHeader text="Make Exercise" />
