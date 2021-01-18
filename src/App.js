@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Routing from "./Router";
+import ImageSet from "./components/ImageSet";
 
 function App() {
   return (
