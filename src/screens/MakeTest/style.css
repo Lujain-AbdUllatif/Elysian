@@ -1,0 +1,65 @@
+.make-test-container button {
+  left: 90%;
+  bottom: 5px;
+  position: relative;
+}
+
+.make-test-inputs {
+  width: 35%;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.make-test-inputs input {
+  font-size: 22px;
+  padding: 6px;
+  width: 285px;
+}
+
+.make-test-inputs input[type="number"] {
+  width: 185px;
+}
+
+.exercises {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+}
+
+.exercise {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.check-and-name {
+  display: flex;
+  column-gap: 6px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 40%;
+  padding-right: 20px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.check-and-name label {
+  font-size: 30px;
+  color: #515068;
+  font-weight: bold;
+}
+
+.check-and-name input {
+  cursor: pointer;
+}
+
+.images {
+  display: flex;
+  column-gap: 20px;
+  flex-wrap: wrap;
+}
