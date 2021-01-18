@@ -1,11 +1,23 @@
-import React, { useState, useContext, useEffect } from "react";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./style.css";
 
-const Home = (props) => {
+//components imports
+import Btn from "../../components/Btn";
+const Home = () => {
   return (
-    <div>
-      Home Page
-      <div></div>
+    <div className="Home">
+      <div className="container">
+        <img src="img/pic.png" />
+        <div className="buttons-container">
+          <NavLink exact to="tester-home">
+            <Btn label="Tester" />
+          </NavLink>
+          <Btn label="Examinee" />
+        </div>
+      </div>
     </div>
   );
 };
+
 export default Home;

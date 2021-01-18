@@ -18,17 +18,11 @@ const TesterHome = () => {
           <NavLink exact to="view-exercises">
             <Btn label="View Exercise" />
           </NavLink>
-          <Btn
-            label="Make a Test"
-            handleClick={() => alert("شكلي نعسان الصبح بساويها")}
-          />
+          <Btn label="Make a Test" />
           <NavLink exact to="view-tests">
             <Btn label="View Tests" />
           </NavLink>
-          <Btn
-            label="Examinee’s Tests"
-            handleClick={() => alert("شكلي نعسان الصبح بساويها")}
-          />
+          <Btn label="Examinee’s Tests" />
         </div>
       </div>
     </div>
