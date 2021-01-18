@@ -23,12 +23,16 @@ export default function ViewTests() {
         return <Line text={test} />;
       })}
       <div className="main-details-Test">
-        {Exercises.map((exercise) => {
-          return <TestExercises text={exercise} />;
-        })}
-        {images.map((iamge) => {
-          return <Images src={iamge} />;
-        })}
+        <div className="exercises-for-tests">
+          {Exercises.map((exercise) => {
+            return <TestExercises text={exercise} />;
+          })}
+        </div>
+        <div className="iamges-for-tests">
+          {images.map((iamge) => {
+            return <Images src={iamge} />;
+          })}
+        </div>
       </div>
     </div>
   );

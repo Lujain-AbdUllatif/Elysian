@@ -1,13 +1,18 @@
 .main-details-Test {
-  display: flex;
+  /* display: flex;
+  flex-direction: column; */
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+  margin-left: 20%;
+  margin-right: 20%;
   background-color: #6aa4c4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 800px;
-  height: 400px;
-  margin-left: 20px;
   border-radius: 12px;
+}
+.exercises-for-tests {
+  column-width: 80px;
+}
+.iamges-for-tests {
+  display: flex;
+  justify-content: space-around;
 }
