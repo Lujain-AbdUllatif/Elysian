@@ -24,7 +24,9 @@ const TesterHome = () => {
           <NavLink exact to="view-tests">
             <Btn label="View Tests" />
           </NavLink>
-          <Btn label="Examinee’s Tests" />
+          <NavLink exact to="examinees">
+            <Btn label="Examinee’s Tests" />
+          </NavLink>
         </div>
       </div>
     </div>

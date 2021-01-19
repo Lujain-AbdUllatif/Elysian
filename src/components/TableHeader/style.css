@@ -1,7 +1,8 @@
-.container-header {
-  background-color: rgb(202, 243, 226);
+.examinee-answers-container-header {
+  background-color: #0e9ae660;
+  color: #515068;
   width: 90%;
-  height: 10vh;
+  height: 20vh;
   position: center;
   display: flex;
   align-items: center;
