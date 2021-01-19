@@ -21,6 +21,14 @@ const questions = [
   "We eat it.",
 ];
 const Line = (props) => {
+  const [eyeClick, setEyeClick] = React.useState(false);
+  const [deleteClick, setDeleteClick] = React.useState(false);
+  const [editClick, setEditClick] = React.useState(false);
+  const handleClick = () => {};
+
+  const handleShowExe = () => {
+    setEyeClick((prev) => !prev);
+  };
   return (
     <div>
       <div className="page-view-line">
