@@ -10,12 +10,9 @@
   border-radius: 12px;
 }
 
-.icons-line {
-  display: flex;
-  justify-content: space-around;
-}
-
-.line-icon {
-  margin: 20px;
-  font-size: 20px;
+.line-btns {
+  border: none;
+  background-color: #b1d8a7;
+  width: 20%;
+  margin-left: 5px;
 }

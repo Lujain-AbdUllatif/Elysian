@@ -1,7 +1,8 @@
-.container-line {
-  background-color: rgb(119, 250, 195);
+.container-examineeline {
+  background-color: #85c87296;
+  color: #515068;
   width: 90%;
-  height: 16vh;
+  height: 25vh;
   position: center;
   display: flex;
   align-items: center;
@@ -12,7 +13,11 @@
   margin-bottom: 1rem;
 }
 
-.icon {
+.container-examineeline:hover {
+  background-color: #85c872f8;
+}
+
+.examinee-line-icons {
   padding: 20px;
   font-size: 2rem;
   width: 20%;
@@ -20,6 +25,15 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+}
+
+.examinee-line-icons text {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.examinee-line-icon {
+  margin-top: 20px;
 }
 
 .txt {
