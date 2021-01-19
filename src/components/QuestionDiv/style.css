@@ -1,6 +1,5 @@
 .questionDiv {
-  background-color: darkgrey;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: auto;
   width: 60rem;
   min-height: 20vh;
@@ -12,5 +11,5 @@
 }
 
 .questionContent {
-  margin-left: 10rem;
+  margin: auto;
 }

@@ -1,0 +1,23 @@
+.dragImgages-div {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 80rem;
+}
+
+.question-button {
+  min-width: 150px;
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #5ea669;
+  color: #fff;
+  outline: none;
+  float: right;
+  display: block;
+  margin-top: 2rem;
+  margin-right: 45%;
+  clear: left;
+}
