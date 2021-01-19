@@ -1,16 +1,18 @@
 import React from "react";
 import { DeleteIcon, ViewIcon, EditIcon } from "../../icons";
-import Images from "../../components/Images";
+import ImageSet from "../../components/ImageSet";
 import Questions from "../../components/Questions";
 import { ScrollIcon } from "../../icons";
-import Train from "../../images/Train.png";
-import burro from "../../images/burro.png";
-import chair from "../../images/chair.png";
-import car from "../../images/car.png";
-import table from "../../images/table.png";
-import turtle from "../../images/turtle.png";
+
 import "./style.css";
-const images = [Train, burro, chair, car, table, turtle];
+const iamges = [
+  "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+  "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+  "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+  "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+  "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+];
+
 const questions = [
   "We sit it. we sit on it.",
   "We travel by it.",
@@ -44,15 +46,10 @@ const Line = (props) => {
             <ViewIcon />
           </button>
         </div>
-        {eyeClick && <div className="details"> </div>}
       </div>
       {eyeClick ? (
         <div className="main-details-exercise">
-          <div className="main-images">
-            {images.map((iamge) => {
-              return <Images src={iamge} />;
-            })}
-          </div>
+          <ImageSet className="images" images={iamges} />
 
           <div className="main-questions">
             <ol>

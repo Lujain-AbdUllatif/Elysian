@@ -1,8 +1,60 @@
 import React from "react";
 import { DeleteIcon, ViewIcon, EditIcon } from "../../icons";
-import TestDetails from "../../components/TestDetails";
+import ImageSet from "../../components/ImageSet";
+import "./style.css";
+const detailsTest = [
+  {
+    exercise: "Exercise 1",
+    src: [
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+    ],
+  },
+  {
+    exercise: "Exercise 2",
+    src: [
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+    ],
+  },
+  {
+    exercise: "Exercise 3",
+    src: [
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+    ],
+  },
+  {
+    exercise: "Exercise 4",
+    src: [
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+    ],
+  },
+  {
+    exercise: "Exercise 5",
+    src: [
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+    ],
+  },
+];
 
-const detailsTest = ["Exercise 1", "Exercise 2", "Exercise 3"];
 const LineTest = (props) => {
   const [eyeClick, setEyeClick] = React.useState(false);
   const [deleteClick, setDeleteClick] = React.useState(false);
@@ -31,12 +83,18 @@ const LineTest = (props) => {
             <ViewIcon />
           </button>
         </div>
-        {eyeClick && <div className="details"> </div>}
       </div>
       {eyeClick ? (
         <div className="main-details-Test">
-          {detailsTest.map((exercise) => {
-            <TestDetails exercise={exercise} />;
+          {detailsTest.map((datalist) => {
+            return (
+              <div className="exercises">
+                <div className="exercise">
+                  {datalist.exercise}
+                  <ImageSet className="images" images={datalist.src} />
+                </div>
+              </div>
+            );
           })}
         </div>
       ) : (
