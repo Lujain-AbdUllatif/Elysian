@@ -2,7 +2,8 @@ import React, { useState, useContext, useEffect } from "react";
 import ExamineeLine from "../../components/ExamineeLine";
 import TableRow from "../../components/TableRow";
 import TableHeader from "../../components/TableHeader";
-import ExamineeHeader from "../../components/ExamineeHeader";
+import TesterHeader from "../../components/TesterHeader";
+
 const ExamineeAnswers = (props) => {
   const examinee = {
     name: "omklthom",
@@ -12,7 +13,7 @@ const ExamineeAnswers = (props) => {
   };
   return (
     <div>
-      <ExamineeHeader text="Examinees Answers" />
+      <TesterHeader text="Examinee's Answers" />
       <ExamineeLine data={examinee} />
       <TableHeader />
       <TableRow />
