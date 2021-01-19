@@ -15,8 +15,6 @@ const Question = (props) => {
     "https://wereallaboutpets.com/wp-content/uploads/2019/12/lovebird-male-names.jpg",
     "https://wereallaboutpets.com/wp-content/uploads/2019/12/lovebird-male-names.jpg",
     "https://wereallaboutpets.com/wp-content/uploads/2019/12/lovebird-male-names.jpg",
-    "https://wereallaboutpets.com/wp-content/uploads/2019/12/lovebird-male-names.jpg",
-    "https://wereallaboutpets.com/wp-content/uploads/2019/12/lovebird-male-names.jpg",
   ]);
 
   useEffect(() => {
@@ -29,18 +27,21 @@ const Question = (props) => {
     <div>
       <ExamineeHeader />
       <Instruction />
-      <DropTarget id="drop1">
+      <div className="dragImgages-div">
         {questionImages.map((item, index) => {
           return (
-            <Drag key={index} id={index}>
-              <img
-                style={{ width: "6rem", height: "6rem", margin: "10px" }}
-                src={item}
-              />
-            </Drag>
+            <DropTarget key={index} id="drop1">
+              <Drag key={index} id={index}>
+                <img
+                  style={{ width: "6rem", height: "6rem", margin: "10px" }}
+                  src={item}
+                />
+              </Drag>
+            </DropTarget>
           );
         })}
-      </DropTarget>
+      </div>
+
       <QuestionDiv question={question} />
       <DropTarget id="drop2"></DropTarget>
       <div></div>

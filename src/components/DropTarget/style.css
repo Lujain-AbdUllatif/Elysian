@@ -1,13 +1,9 @@
 .drop1 {
   margin: auto;
-  width: 80rem;
-  min-height: 20vh;
+  width: 8.5rem;
+  height: 8.5rem;
   font-size: 2rem;
   font-weight: bolder;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   padding: 10px;
   background-color: rgb(166, 221, 166);
 }
