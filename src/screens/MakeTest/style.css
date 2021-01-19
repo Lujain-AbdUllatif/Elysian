@@ -36,7 +36,6 @@
   display: flex;
   align-items: center;
   column-gap: 20px;
-  border: 2px solid green;
 }
 
 .check-and-name {
@@ -62,7 +61,7 @@
 
 .images {
   display: flex;
-  border: 2px solid red;
-  /* column-gap: 20px; */
-  /* flex-wrap: wrap; */
+
+  column-gap: 20px;
+  flex-wrap: wrap;
 }
