@@ -11,7 +11,7 @@ const toBase64 = (file) =>
     reader.onload = () => resolve(reader.result);
     reader.onerror = (error) => reject(error);
   });
-const PicUpload = ({ picNum }) => {
+const PicUpload = ({ picNum, setImages, pics }) => {
   //states
   const [testVal, setTestval] = useState("");
   // console.log("ORIGINAAAAAAL: ", testVal); // send the obj to base64.
@@ -20,14 +20,14 @@ const PicUpload = ({ picNum }) => {
     try {
       if (testVal) {
         const res = await toBase64(testVal);
-        console.log(res);
+        setImages((images) => [...images, { number: picNum, url: res }]);
+        console.log("==>res", res);
+        console.log("===>imgNum!!", picNum);
       }
     } catch (err) {
       console.log("ERRORROOOOO: ", err);
     }
   }
-
-  testFunc();
 
   // console.log("THE ARRAYYYY: ", testVal.split("from"));
   // console.log("the path is: ", testVal.split("from")[0].trim()); // this is the whole path
@@ -44,7 +44,11 @@ const PicUpload = ({ picNum }) => {
         <input
           type="file"
           id="pic-upload"
-          onChange={(e) => setTestval(e.target.files[0])}
+          onChange={(e) => {
+            console.log("eventt", e);
+            setTestval(e.target.files[0]);
+            testFunc();
+          }}
         />
       </label>
     </div>
