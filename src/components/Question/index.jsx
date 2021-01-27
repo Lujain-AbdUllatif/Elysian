@@ -3,16 +3,34 @@ import "./style.css";
 
 //icons imports
 import { ArrowIcon } from "../../icons/index";
-const Question = ({ pics }) => {
+const Question = ({ pics, setValues, values }) => {
   //states
   const [clicked, setClicked] = useState(true);
+
+  const handleOnChange = (event, inputName) => {
+    setValues({ ...values, [inputName]: event.target.value });
+  };
 
   return (
     <div className="Question">
       <div className="container">
-        <input type="text" placeholder="Question" className="question" />
+        <input
+          type="text"
+          placeholder="Question"
+          className="question"
+          onChange={(event) => {
+            handleOnChange(event, "question");
+          }}
+        />
 
-        <input type="text" placeholder="Keyword" className="keyword" />
+        <input
+          type="text"
+          placeholder="Keyword"
+          className="keyword"
+          onChange={(event) => {
+            handleOnChange(event, "keyword");
+          }}
+        />
         <span className="list-key">
           Answers
           <div className="arrow-container">
