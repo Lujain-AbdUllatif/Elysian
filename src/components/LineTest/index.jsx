@@ -1,61 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { DeleteIcon, ViewIcon, EditIcon } from "../../icons";
 import ImageSet from "../../components/ImageSet";
+import { viewExercise } from "../../Api/api";
 import "./style.css";
-const detailsTest = [
-  {
-    exercise: "Exercise 1",
-    src: [
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-    ],
-  },
-  {
-    exercise: "Exercise 2",
-    src: [
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-    ],
-  },
-  {
-    exercise: "Exercise 3",
-    src: [
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-    ],
-  },
-  {
-    exercise: "Exercise 4",
-    src: [
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-    ],
-  },
-  {
-    exercise: "Exercise 5",
-    src: [
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-      "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-    ],
-  },
-];
-
 const LineTest = (props) => {
+  const [detailsTest, setDetailsTest] = React.useState([]);
   const [eyeClick, setEyeClick] = React.useState(false);
   const [deleteClick, setDeleteClick] = React.useState(false);
   const [editClick, setEditClick] = React.useState(false);
@@ -64,6 +13,11 @@ const LineTest = (props) => {
   const handleShowExe = () => {
     setEyeClick((prev) => !prev);
   };
+  useEffect(async () => {
+    const detailsTest = await viewExercise();
+    // console.log("dataTest:", detailsTest);
+    setDetailsTest(detailsTest);
+  }, []);
   return (
     <div>
       <div className="page-view-line">
@@ -90,8 +44,8 @@ const LineTest = (props) => {
             return (
               <div className="exercises">
                 <div className="exercise">
-                  {datalist.exercise}
-                  <ImageSet className="images" images={datalist.src} />
+                  {datalist.name}
+                  <ImageSet className="images" images={datalist.images} />
                 </div>
               </div>
             );
