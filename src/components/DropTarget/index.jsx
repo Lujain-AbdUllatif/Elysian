@@ -10,14 +10,18 @@ const DropTarget = (props) => {
   function drop(ev) {
     ev.preventDefault();
     console.log("==>>", ev.dataTransfer.getData("transfer"));
-
     const droppedItem = ev.dataTransfer.getData("transfer");
-    console.log("item", droppedItem);
+    //console.log("item", droppedItem);
     ev.target.appendChild(document.getElementById(droppedItem));
   }
 
   return (
-    <div className={props.id} id={props.id} onDragOver={dragOver} onDrop={drop}>
+    <div
+      className={props.className}
+      id={props.id}
+      onDragOver={dragOver}
+      onDrop={drop}
+    >
       {props.children}
     </div>
   );
