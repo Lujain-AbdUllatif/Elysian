@@ -3,7 +3,7 @@ import "./style.css";
 import { addExercise } from "../../Api/api";
 
 //icons imports
-import { PlusIcon, MinusIcon } from "../../icons/index";
+import { PlusIcon } from "../../icons/index";
 
 //components imports
 import PicUpload from "../../components/PicUpload";
@@ -15,97 +15,107 @@ const MakeExercise = () => {
   const [questions, setQuestions] = useState("+");
   const [exerciseName, setExerciseName] = useState("");
   const [images, setImages] = useState([]);
-  const [values, setValues] = useState({
-    question: "",
-    keyword: "",
-    answers: [],
-  });
-  const [questionsArr, setQArr] = useState([]);
-
+  const [questionsObj, setQArr] = useState({});
   // //functions
   const addPicUploader = () => {
     return setPics((prev) => prev + "+");
   };
-  useEffect(() => {
-    //console.log("arrayOfImages", images);
-  });
-  console.log("arrayOfImages", images);
+
+  //answersFilled()
+  const answersFilled = () => {
+    var question;
+    for (question in questionsObj) {
+      if (!questionsObj[question]["answers"]) return false;
+      else if (questionsObj[question]["answers"].length == 0) return false;
+    }
+    return true;
+  };
+
+  //submitHandler()
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    const ok = await answersFilled();
+    if (ok) {
+      addExercise({
+        name: exerciseName,
+        images: images,
+        questions: Object.values(questionsObj),
+      });
+    } else {
+      alert("Please Make Sure To Fill The Answers For Each Question");
+    }
+  };
 
   return (
     <div className="MakeExercise">
-      <TesterHeader text="Make Exercise" />
-      <input
-        placeholder="Exercise Name..."
-        className="name-input"
-        onChange={(event) => {
-          setExerciseName(event.target.value);
-          console.log("===>", exerciseName);
-        }}
-      />
-      <h4 className="sub-title">Insert pictures</h4>
-      <div className="pic-uploaders-container">
-        {Array.from(pics).map((pic, i) => {
-          return (
-            <PicUpload
-              key={i}
-              setPics={setPics}
-              picNum={i + 1}
-              setImages={setImages}
-              pics={pics}
-            />
-          );
-        })}
-        <div className="plus-container">
-          <PlusIcon
-            className="plus-icon"
-            size="50px"
-            cursor="pointer"
-            onClick={addPicUploader}
-          />
-        </div>
-      </div>
-      <h4 className="sub-title">Insert questions</h4>
-      <div className="questions-section">
-        {Array.from(questions).map((question, i) => {
-          return (
-            <Question
-              key={i}
-              pics={pics}
-              values={values}
-              setValues={setValues}
-            />
-          );
-        })}
-      </div>
-      <button
-        className="btn add-question-btn"
-        onClick={() => {
-          setQuestions((prev) => prev + "+");
-          setQArr((questions) => [...questions, values]);
-          console.log("questionArr", questionsArr);
+      <TesterHeader text="Make Exercise" />\{" "}
+      <form
+        onSubmit={(e) => {
+          submitHandler(e);
         }}
       >
-        Add Question
-      </button>
-      <div className="add-exercise-btn-con">
+        <input
+          placeholder="Exercise Name..."
+          className="name-input"
+          onChange={(event) => {
+            setExerciseName(event.target.value);
+          }}
+        />
+        <h4 className="sub-title">Insert pictures</h4>
+        <div className="pic-uploaders-container">
+          {Array.from(pics).map((pic, i) => {
+            return (
+              <PicUpload
+                key={i}
+                setPics={setPics}
+                picNum={i + 1}
+                setImages={setImages}
+                pics={pics}
+                id={i}
+                pics={pics}
+                setPics={setPics}
+              />
+            );
+          })}
+          <div className="plus-container">
+            <PlusIcon
+              className="plus-icon"
+              size="50px"
+              cursor="pointer"
+              onClick={addPicUploader}
+            />
+          </div>
+        </div>
+        <h4 className="sub-title">Insert questions</h4>
+        <div className="questions-section">
+          {Array.from(questions).map((question, i) => {
+            return (
+              <Question
+                questions={questions}
+                key={i}
+                pics={pics}
+                setQArr={setQArr}
+                id={i}
+                images={images}
+              />
+            );
+          })}
+        </div>
         <button
-          className="btn "
+          type="button"
+          className="btn add-question-btn"
           onClick={() => {
-            addExercise({
-              name: exerciseName,
-              images: images,
-              questions: questionsArr,
-            });
-            console.log("Data", {
-              name: exerciseName,
-              images: images,
-              questions: questionsArr,
-            });
+            setQuestions((prev) => prev + "+");
           }}
         >
-          Add Exercise
+          Add Question
         </button>
-      </div>
+        <div className="add-exercise-btn-con">
+          <button type="submit" className="btn ">
+            Add Exercise
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
