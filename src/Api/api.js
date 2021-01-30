@@ -6,14 +6,12 @@ export const addExercise = async (data) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        //authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ data: data }),
+      body: JSON.stringify({ data }),
     });
-    console.log(data);
     const res = await respone.json();
     if (res) {
-      console.log(res);
+      console.log("parsed response is: ", res);
     }
   } catch (err) {
     console.log(err);

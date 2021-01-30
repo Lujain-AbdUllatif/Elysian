@@ -11,13 +11,9 @@ import {
   FaEdit,
   FaCalendarAlt,
 } from "react-icons/fa";
-import {
-  AiFillPlusCircle,
-  AiOutlineMinusCircle,
-  AiFillClockCircle,
-} from "react-icons/ai";
+import { AiFillPlusCircle, AiFillClockCircle } from "react-icons/ai";
 import { IoMdArrowDropdown } from "react-icons/io";
-
+import { TiDelete } from "react-icons/ti";
 export function NetIcon(props) {
   return (
     <IconContext.Provider value={{ className: props.className }}>
@@ -114,10 +110,10 @@ export function ScrollIcon(props) {
   );
 }
 
-export function MinusIcon(props) {
+export function DeleteXIcon(props) {
   return (
     <IconContext.Provider value={{ className: props.className }}>
-      <AiOutlineMinusCircle onClick={props.onClick} />
+      <TiDelete onClick={props.onClick} />
     </IconContext.Provider>
   );
 }
