@@ -1,11 +1,11 @@
 .drop1 {
   margin: auto;
-  width: 8.5rem;
-  height: 8.5rem;
+  width: 9rem;
+  height: 9rem;
   font-size: 2rem;
   font-weight: bolder;
-  padding: 10px;
-  background-color: rgb(166, 221, 166);
+  padding: 20px;
+  border: 5px solid rgb(131, 231, 131);
 }
 
 .drop2 {
@@ -16,10 +16,13 @@
   font-weight: bolder;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 5rem;
   flex-wrap: wrap;
-  background-color: rgb(166, 221, 166);
+  /* background-color: rgb(166, 221, 166); */
   margin-top: 10px;
+
+  border: 0.4rem solid rgb(166, 221, 166);
 }
 
 img {

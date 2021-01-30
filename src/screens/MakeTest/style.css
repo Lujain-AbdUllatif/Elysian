@@ -61,7 +61,7 @@
 
 .images {
   display: flex;
-
+  margin-top: 5px;
   column-gap: 20px;
   flex-wrap: wrap;
 }

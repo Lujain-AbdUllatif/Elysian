@@ -54,17 +54,14 @@ const Line = (props) => {
       {eyeClick ? (
         <div className="main-details-exercise">
           {data.map((images) => {
-            <ImageSet className="images" images={images.images} />;
-            {
-              console.log("images:", images.images);
-            }
+            return <ImageSet className="images" images={images.images} />;
           })}
           <div className="main-questions">
             <ol>
               {data.map((q) => {
-                q.questions.map((question, i) => {
+                return q.questions.map((question, i) => {
                   {
-                    console.log("question:", question[0].question);
+                    console.log("question:", question.question);
                   }
                   return (
                     <Questions
