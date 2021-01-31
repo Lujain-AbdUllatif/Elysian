@@ -1,0 +1,36 @@
+.ask-div {
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.ask-div img {
+  width: 180px;
+  height: 180px;
+}
+
+.pic-question {
+  color: #3d3b75;
+  font-weight: bolder;
+  font-size: 28px;
+}
+
+.yes-no-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  padding-top: 8px;
+}
+
+.yes-no-btns button {
+  font-size: 27px;
+  width: 90px;
+  outline: none;
+  padding: 5px;
+  cursor: pointer;
+  color: #3d3b75;
+  background-color: #ff7851;
+}
