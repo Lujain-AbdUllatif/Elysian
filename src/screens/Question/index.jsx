@@ -8,6 +8,7 @@ import Instruction from "../../components/Instructions";
 import Btn from "../../components/Btn";
 import Alert from "../../components/Alert";
 import PicAsk from "../../components/PicAsk";
+import ExerciseQuestion from "../../components/ExerciseQuestion";
 const Question = (props) => {
   const [test, setTest] = useState("");
   const [exercise, setExercise] = useState("");
@@ -88,6 +89,7 @@ const Question = (props) => {
       setQuestionCounter((counter) => counter + 1);
       setNextQuestion(false); //because we are starting new question
       setStepsCounter(0);
+      return; //addeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed
       // setQuestion(exercise.questions[questionCounter]); // new question is here :)
     }
 
@@ -104,6 +106,9 @@ const Question = (props) => {
     }
     // set nextQuestion to "True"  if the examinee has no wrong images and picked all correct images
     if (done) {
+      setQuestionCounter((counter) => counter + 1); //addeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed
+      setStepsCounter(0); //addeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed
+
       setNextQuestion(true);
       alert("WELL DONE :)");
     } else {
@@ -181,9 +186,14 @@ const Question = (props) => {
     }
   }, [stepsCounter]);
 
+  console.log("questionCounteeeeeeeeeeeeeeeer: ", questionCounter);
   return (
     <div>
       <ExamineeHeader />
+      <ExerciseQuestion
+        ex_question_now={questionCounter + 1}
+        ex_question_all={15}
+      />
       <Instruction />
       <div className="dragImgages-div">
         {images.map((item, index) => {
