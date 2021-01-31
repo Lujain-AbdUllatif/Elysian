@@ -9,7 +9,6 @@ const DropTarget = (props) => {
 
   function drop(ev) {
     ev.preventDefault();
-    console.log("==>>", ev.dataTransfer.getData("transfer"));
     const droppedItem = ev.dataTransfer.getData("transfer");
     //console.log("item", droppedItem);
     ev.target.appendChild(document.getElementById(droppedItem));

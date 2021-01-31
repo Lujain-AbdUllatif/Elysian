@@ -5,9 +5,6 @@ const Drag = (props) => {
   function startDrag(ev) {
     ev.dataTransfer.setData("transfer", props.id); //check if id
     document.getElementById(`${props.id}`).style.border = "none";
-
-    console.log("OMMGGG WE ARE IN DRAG!!", props.id);
-    console.log("whhhat!!", props.id);
   }
 
   const noAllowDrag = (ev) => {
