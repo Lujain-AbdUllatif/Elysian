@@ -3,6 +3,7 @@ import Drag from "../../components/Drag";
 import DropTarget from "../../components/DropTarget";
 import QuestionDiv from "../../components/QuestionDiv";
 import ExamineeHeader from "../../components/ExamineeHeader";
+import ExerciseQuestion from "../../components/ExerciseQuestion";
 import "./style.css";
 import Instruction from "../../components/Instructions";
 import Btn from "../../components/Btn";
@@ -41,6 +42,7 @@ const Question = (props) => {
   ]);
   // set the answers in the answers box using answerFunc in line 50
   const [answers, setAnswers] = useState(null);
+  // it takes he next question in row
   const [nextQuestion, setNextQuestion] = useState(false);
   // counts the steps per question
   const [stepsCounter, setStepsCounter] = useState(0);
@@ -52,6 +54,10 @@ const Question = (props) => {
   const [questionCounter, setQuestionCounter] = useState(0);
   // count the exercises per test
   const [exerciseCounter, setExerciseCounter] = useState(0);
+  // Wrong answers counter
+  const [wrongAnswerCounter, setWrongAnswer] = useState(0);
+
+  console.log("stepsCounter is >>> ", stepsCounter);
 
   //functions
   //answersFunc(), returns an array of all the answers
@@ -77,17 +83,18 @@ const Question = (props) => {
         return wrongAnswers.push(ans);
       }
     });
+    setWrongAnswer(wrongAnswers.length);
     return wrongAnswers;
   };
 
   //newQuestion
-  const newQuestion = () => {
+  const newQuestion = async () => {
     /*this should be the first check here, because there is no need to make any implementation if we should move to the next question, the block below skips for the next question if the examinee waste all the chances or answerd the true answer*/
     if (nextQuestion || stepsCounter == 100) {
       // steCounter==100 just for testing :) :) :) :)
       setQuestionCounter((counter) => counter + 1);
       setNextQuestion(false); //because we are starting new question
-      setStepsCounter(0);
+      setWrongAnswer(0);
       // setQuestion(exercise.questions[questionCounter]); // new question is here :)
     }
 
@@ -180,10 +187,19 @@ const Question = (props) => {
       dragPicsBack();
     }
   }, [stepsCounter]);
-
+  console.log("counterrQQQ", questionCounter);
   return (
     <div>
-      <ExamineeHeader />
+      <ExamineeHeader
+      // ex_now={exerciseCounter}
+      // ex_all={test.exercises.length}
+      />
+
+      <ExerciseQuestion
+        ex_question_now={questionCounter + 1}
+        ex_question_all="15"
+        // ex_question_all={exercise.questions.length}
+      />
       <Instruction />
       <div className="dragImgages-div">
         {images.map((item, index) => {
