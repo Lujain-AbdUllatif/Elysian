@@ -1,5 +1,6 @@
 import React from "react";
 import ImageSet from "../ImageSet";
+import "./style.css";
 
 const ExercisesTest = (props) => {
   console.log("ExercisesTest:", props.exercises);
@@ -8,7 +9,7 @@ const ExercisesTest = (props) => {
     <div className="ExercisesTest">
       {props.exercises.map((exercise) => (
         <div className="detailstests">
-          {exercise.name}
+          <div className="exercisename">{exercise.name}</div>
           <ImageSet className="images" images={exercise.images} />
         </div>
       ))}

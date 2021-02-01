@@ -2,3 +2,8 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.exercisename {
+  margin: auto;
+  margin-right: 7px;
+}
