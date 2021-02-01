@@ -1,23 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { DeleteIcon, ViewIcon, EditIcon } from "../../icons";
 import ImageSet from "../../components/ImageSet";
-import { viewExercise } from "../../Api/api";
+import ExercisesTest from "../ExercisesTests";
 import "./style.css";
 const LineTest = (props) => {
-  const [detailsTest, setDetailsTest] = React.useState([]);
   const [eyeClick, setEyeClick] = React.useState(false);
-  const [deleteClick, setDeleteClick] = React.useState(false);
-  const [editClick, setEditClick] = React.useState(false);
+  // const [deleteClick, setDeleteClick] = React.useState(false);
+  // const [editClick, setEditClick] = React.useState(false);
   const handleClick = () => {};
 
   const handleShowExe = () => {
     setEyeClick((prev) => !prev);
   };
-  useEffect(async () => {
-    const detailsTest = await viewExercise();
-    // console.log("dataTest:", detailsTest);
-    setDetailsTest(detailsTest);
-  }, []);
+
   return (
     <div>
       <div className="page-view-line">
@@ -40,16 +35,12 @@ const LineTest = (props) => {
       </div>
       {eyeClick ? (
         <div className="main-details-Test">
-          {detailsTest.map((datalist) => {
-            return (
-              <div className="exercises">
-                <div className="exercise">
-                  {datalist.name}
-                  <ImageSet className="images" images={datalist.images} />
-                </div>
-              </div>
-            );
-          })}
+          {console.log(props.TestData.exercises)}
+          <div className="exercises">
+            <div className="exercise">
+              <ExercisesTest exercises={props.TestData.exercises} />
+            </div>
+          </div>
         </div>
       ) : (
         <div></div>

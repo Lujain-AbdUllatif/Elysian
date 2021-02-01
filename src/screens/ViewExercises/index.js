@@ -22,11 +22,14 @@ export default function ViewExercises() {
       <TesterHeader text="View-Exercises" />
       {exercises &&
         exercises.map((exercise, i) => {
+          console.log("exercise :", i, " ", exercise);
+
           return (
             <Line
               key={exercise.name}
               index={i}
               text={exercise.name}
+              exerciseData={exercise}
               onDelete={deleteExecrise}
             />
           );

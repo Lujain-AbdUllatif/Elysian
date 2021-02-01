@@ -14,7 +14,7 @@ export default function ViewTests() {
   };
   useEffect(async () => {
     const Tests = await viewTest();
-    console.log(Tests);
+    console.log("data test:", Tests);
     setTests(Tests);
   }, []);
   return (
@@ -26,6 +26,7 @@ export default function ViewTests() {
             key={test.name}
             index={i}
             text={test.name}
+            TestData={test}
             onDelete={deleteTest}
           />
         );
