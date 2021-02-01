@@ -3,7 +3,20 @@ import "./style.css";
 const Questions = (props) => {
   return (
     <div className="questions-viewExercises">
-      <li>{props.question}</li>
+      {props.questions.map(({ question }) => (
+        <li>{question}</li>
+      ))}
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
+      <li>test</li>
     </div>
   );
 };

@@ -3,33 +3,20 @@ import { DeleteIcon, ViewIcon, EditIcon } from "../../icons";
 import "./style.css";
 import ImageSet from "../../components/ImageSet";
 import Questions from "../../components/Questions";
-import { viewExercise } from "../../Api/api";
+
 import { ScrollIcon } from "../../icons";
+import ScrollToTop from "../ScrollToTop";
 import "./style.css";
 
 const Line = (props) => {
-  const [data, setData] = React.useState([]);
   const [eyeClick, setEyeClick] = React.useState(false);
   const [deleteClick, setDeleteClick] = React.useState(false);
   const [editClick, setEditClick] = React.useState(false);
-  const handleClick = () => {};
 
   const handleShowExe = () => {
     setEyeClick((prev) => !prev);
   };
-  useEffect(async () => {
-    const data = await viewExercise();
-    console.log("data Exercise:", data);
-    // console.log(
-    //   "array of questions:",
-    //   data.map((q) => q.questions.map((questions) => questions.question))
-    // );
-    // console.log(
-    //   "array of images ",
-    //   data.map((i) => i.images)
-    // );
-    setData(data);
-  }, []);
+
   return (
     <div>
       <div className="page-view-line">
@@ -41,9 +28,9 @@ const Line = (props) => {
           >
             <DeleteIcon />
           </button>
-          <button onClick={handleClick} className="line-btns">
+          {/* <button onClick={handleClick} className="line-btns">
             <EditIcon />
-          </button>
+          </button> */}
 
           <button onClick={handleShowExe} className="line-btns">
             <ViewIcon />
@@ -53,28 +40,15 @@ const Line = (props) => {
 
       {eyeClick ? (
         <div className="main-details-exercise">
-          {data.map((images) => {
-            return <ImageSet className="images" images={images.images} />;
-          })}
+          <ImageSet className="images" images={props.exerciseData.images} />
           <div className="main-questions">
-            <ol>
-              {data.map((q) => {
-                return q.questions.map((question, i) => {
-                  {
-                    console.log("question:", question.question);
-                  }
-                  return (
-                    <Questions
-                      key={question.question}
-                      index={i}
-                      question={question.question}
-                    />
-                  );
-                });
-              })}
+            <ol style={{ height: "200px" }}>
+              {<Questions questions={props.exerciseData.questions} />}
             </ol>
           </div>
-          <ScrollIcon className="scroll-icon" />
+          {/* <button>
+            <ScrollIcon onClick={handleClick} className="scroll-icon" />
+          </button> */}
         </div>
       ) : (
         <div></div>
