@@ -1,57 +1,57 @@
-import React from "react";
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
   Redirect,
-} from "react-router-dom";
+} from 'react-router-dom'
 
 //screens imports
-import Home from "../screens/Home";
-import Question from "../screens/Question";
-import MakeExercise from "../screens/MakeExercise";
-import ExamineeAnswers from "../screens/ExamineeAnswers";
-import Examinees from "../screens/Examinees";
-import ViewExercises from "../screens/ViewExercises";
-import ViewTests from "../screens/ViewTests";
-import TesterHome from "../screens/TesterHome";
-import MakeTest from "../screens/MakeTest";
-
+import Home from '../screens/Home'
+import Question from '../screens/Question'
+import MakeExercise from '../screens/MakeExercise'
+import ExamineeAnswers from '../screens/ExamineeAnswers'
+import Examinees from '../screens/Examinees'
+import ViewExercises from '../screens/ViewExercises'
+import ViewTests from '../screens/ViewTests'
+import TesterHome from '../screens/TesterHome'
+import MakeTest from '../screens/MakeTest'
+import LogIn from '../screens/LogIn/index'
 export default function Routing(props) {
   return (
     <div>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Home />
+          <Route exact path='/'>
+            <LogIn />
           </Route>
-          <Route path="/question">
+          <Route path='/question'>
             <Question />
           </Route>
-          <Route path="/examinees-answers">
+          <Route path='/examinees-answers'>
             <ExamineeAnswers />
           </Route>
-          <Route path="/examinees">
+          <Route path='/examinees'>
             <Examinees />
           </Route>
-          <Route path="/make-exercise">
+          <Route path='/make-exercise'>
             <MakeExercise />
           </Route>
-          <Route path="/view-exercises">
+          <Route path='/view-exercises'>
             <ViewExercises />
           </Route>
-          <Route path="/view-tests">
+          <Route path='/view-tests'>
             <ViewTests />
           </Route>
-          <Route path="/tester-home">
+          <Route path='/tester-home'>
             <TesterHome />
           </Route>
-          <Route path="/make-test">
+          <Route path='/make-test'>
             <MakeTest />
           </Route>
         </Switch>
       </Router>
     </div>
-  );
+  )
 }

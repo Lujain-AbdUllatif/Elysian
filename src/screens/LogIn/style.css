@@ -1,0 +1,111 @@
+body {
+  background-color: #aebfff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+  background: #002027;
+  background: linear-gradient(to right, #d1ffd9, #a8b3aa, #d1ffd9);
+}
+.logo {
+  height: auto;
+  width: 220px;
+  margin-bottom: -50px;
+  margin-top: -10px;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  max-height: 400px;
+  margin-top: 150px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(211, 211, 211, 0.85);
+  border-radius: 10px;
+  height: 90vh;
+  width: 60vh;
+  max-height: 600px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 50, 50, 0.41);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 50, 50, 0.41);
+  box-shadow: 0px 0px 8px 0px rgba(0, 50, 50, 0.41);
+}
+.input {
+  width: 90%;
+  height: 50%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+#msg {
+  color: #bf1650;
+  max-height: 20px;
+  padding: 0px;
+  margin: 5px;
+}
+
+#role-box {
+  height: 20px;
+  width: 20px;
+}
+#checkBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100px;
+  justify-content: space-around;
+}
+.submit {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: #2fa12b;
+  border-radius: 5px;
+  padding: 5px;
+  width: 50%;
+  height: 80%;
+  margin-top: 10%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: #ffffff;
+  color: #2fa12b;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    display: unset;
+    margin: 0px;
+  }
+  .card {
+    width: unset;
+    border-radius: 0px;
+    min-height: 100vh;
+    padding: 0px;
+    position: relative;
+  }
+  .input {
+    min-height: 35px;
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0px !important;
+  }
+}
