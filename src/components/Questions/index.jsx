@@ -1,8 +1,8 @@
-import React from "react";
-import "./style.css";
+import React from 'react'
+import './style.css'
 const Questions = (props) => {
   return (
-    <div className="questions-viewExercises">
+    <div className='questions-viewExercises'>
       {props.questions.map(({ question }) => (
         <li>{question}</li>
       ))}
@@ -18,6 +18,6 @@ const Questions = (props) => {
       <li>test</li>
       <li>test</li>
     </div>
-  );
-};
-export default Questions;
+  )
+}
+export default Questions
