@@ -27,12 +27,7 @@ const LogIn = () => {
       }),
     })
       .then((res) => {
-        // console.log(res.status)
-        // var btata = res.json()
-        // setTimeout(() => {
-        //   console.log(btata)
-        // }, 3000)
-        res.json()
+        return res.json()
       })
       .then((obj) => {
         console.log(obj)
