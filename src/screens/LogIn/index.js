@@ -36,7 +36,7 @@ const LogIn = () => {
       })
       .then((obj) => {
         console.log(obj)
-        if (obj.access_token) window.location.pathname = '/'
+        if (obj.access_token) window.location.pathname = '/tester-home'
         else return obj
       })
       .catch((error) => {
