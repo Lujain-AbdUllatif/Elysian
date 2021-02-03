@@ -9,6 +9,8 @@ import Btn from "../../components/Btn";
 import Alert from "../../components/Alert";
 import PicAsk from "../../components/PicAsk";
 import ExerciseQuestion from "../../components/ExerciseQuestion";
+//sounds
+const questionCompleted = new Audio("/sounds/questioncompleted.mp3");
 const Question = (props) => {
   const [test, setTest] = useState("");
   const [exercise, setExercise] = useState("");
@@ -45,8 +47,7 @@ const Question = (props) => {
   const [nextQuestion, setNextQuestion] = useState(false);
   // counts the steps per question
   const [stepsCounter, setStepsCounter] = useState(0);
-  //counts the number of asks for a picture (we ask 3 times for each pic)
-  const [picAsks, setPicAsks] = useState(0);
+
   // counts the questoins per exercise
   const [currentPic, setCurrentPic] = useState(images[0]);
   //currentPic is the picture that we are asking about right now
@@ -106,9 +107,9 @@ const Question = (props) => {
     }
     // set nextQuestion to "True"  if the examinee has no wrong images and picked all correct images
     if (done) {
+      questionCompleted.play();
       setQuestionCounter((counter) => counter + 1); //addeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed
       setStepsCounter(0); //addeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed
-
       setNextQuestion(true);
       alert("WELL DONE :)");
     } else {
@@ -186,7 +187,6 @@ const Question = (props) => {
     }
   }, [stepsCounter]);
 
-  console.log("questionCounteeeeeeeeeeeeeeeer: ", questionCounter);
   return (
     <div>
       <ExamineeHeader />
@@ -217,8 +217,6 @@ const Question = (props) => {
           answers={question.answers}
           currentPic={currentPic}
           setCurrentPic={setCurrentPic}
-          picAsks={picAsks}
-          setPicAsks={setPicAsks}
         />
       ) : (
         ""
