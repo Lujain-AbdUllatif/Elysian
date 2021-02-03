@@ -3,9 +3,6 @@ import { DeleteIcon, ViewIcon, EditIcon } from "../../icons";
 import "./style.css";
 import ImageSet from "../../components/ImageSet";
 import Questions from "../../components/Questions";
-
-import { ScrollIcon } from "../../icons";
-import ScrollToTop from "../ScrollToTop";
 import "./style.css";
 
 const Line = (props) => {

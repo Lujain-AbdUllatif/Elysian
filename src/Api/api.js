@@ -21,20 +21,17 @@ export const addExercise = async (data) => {
 //connect front with back in viewExercises
 export const viewExercise = async () => {
   try {
+    const access_token = localStorage.getItem("access_token");
+    const tests_id = localStorage.getItem("tests_id");
+    const testsid = JSON.parse(tests_id);
     const response = await fetch(`${local}/tester/exercises`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        access_token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTZmMWUwNjY2YjY0MTE0MGJiZGM4OCIsInJvbGUiOiJ0ZXN0ZXIiLCJpYXQiOjE2MTIxMTcyMTZ9.iSNlXyHD5rNAdJrlI0EwckFWFmHkGrheMaf-XpmmjoM",
+        access_token: access_token,
       },
       body: JSON.stringify({
-        tests_id: [
-          "6015948eba159f12050993cf",
-          "601594dbba159f12050993d0",
-          "6016f3cb666b641140bbdc8a",
-          "60184dd0808df20def34efd1",
-        ],
+        tests_id: { tests_id: testsid },
       }),
     });
 
@@ -49,25 +46,25 @@ export const viewExercise = async () => {
 };
 
 //connect front with back in viewTests
+
 export const viewTest = async () => {
   try {
+    const access_token = localStorage.getItem("access_token");
+    const tests_id = localStorage.getItem("tests_id");
+    console.log("tests_id:", JSON.parse(tests_id));
+    const testsid = JSON.parse(tests_id);
     const responseTest = await fetch(`${local}/tester/tests`, {
       method: "POST",
       headers: {
         "content-Type": "application/json",
-        access_token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTZmMWUwNjY2YjY0MTE0MGJiZGM4OCIsInJvbGUiOiJ0ZXN0ZXIiLCJpYXQiOjE2MTIxOTU1MDd9.xFBUimnzJZLnvYKjpivm0xlE-bl67rG60jfEpNaBs1Y",
-      },
-      body: JSON.stringify({
-        tests_id: [
-          "6015948eba159f12050993cf",
-          "601594dbba159f12050993d0",
-          "6016f3cb666b641140bbdc8a",
-          "60184dd0808df20def34efd1",
-        ],
-      }),
-    });
 
+        access_token:
+          // "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTZmMWUwNjY2YjY0MTE0MGJiZGM4OCIsInJvbGUiOiJ0ZXN0ZXIiLCJpYXQiOjE2MTIxOTU1MDd9.xFBUimnzJZLnvYKjpivm0xlE-bl67rG60jfEpNaBs1Y",
+          access_token,
+      },
+
+      body: JSON.stringify({ tests_id: testsid }),
+    });
     const dataTest = await responseTest.json();
     console.log("dataTest:", dataTest.data);
     if (dataTest) {
@@ -77,5 +74,3 @@ export const viewTest = async () => {
     console.log(error);
   }
 };
-
-//{
