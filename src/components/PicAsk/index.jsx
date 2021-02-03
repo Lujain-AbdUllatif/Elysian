@@ -319,7 +319,7 @@ const PicAsk = ({ images, answers, currentPic, setCurrentPic }) => {
       <img src={currentPic.url} className={bigPicClaass} />
       <div className="questionAndButtons">
         {askThreeTimes ? (
-          <h2 className="pic-question big">"Are You Sure? Think Again"</h2>
+          <h1 className="pic-question big">Are You Sure? Think Again</h1>
         ) : (
           ""
         )}

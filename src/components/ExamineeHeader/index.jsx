@@ -7,7 +7,9 @@ export default function ExamineeHeader(props) {
     <div className="examinee-header-container">
       <div>
         <TestIcon className="examinee-header-icon" />
-        Exercise {props.ex_now} / {props.ex_all}
+        <h2>
+          Exercise {props.ex_now} / {props.ex_all}
+        </h2>
       </div>
       <div>
         {props.time}

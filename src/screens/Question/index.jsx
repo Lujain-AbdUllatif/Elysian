@@ -189,7 +189,7 @@ const Question = (props) => {
 
   return (
     <div>
-      <ExamineeHeader />
+      <ExamineeHeader ex_now="3" ex_all="7" />
       <ExerciseQuestion
         ex_question_now={questionCounter + 1}
         ex_question_all={15}

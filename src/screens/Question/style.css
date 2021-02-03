@@ -22,3 +22,28 @@
   margin-right: 45%;
   clear: left;
 }
+
+.drop2 {
+  border: none;
+  /* background: url("./woood.jpg"); */
+  background-color: #285a84;
+  /* background-repeat: no-repeat;
+  background-position: center; */
+  border: #5ea669 solid 10px;
+  height: 30vh;
+  width: 70vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  opacity: 0.9;
+}
+
+.drop2 div {
+  margin: 10px;
+}
+
+.drop1 {
+  border-color: #5ea669;
+}

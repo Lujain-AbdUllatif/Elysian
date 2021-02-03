@@ -8,7 +8,7 @@
   border: 5px solid rgb(131, 231, 131);
 }
 
-.drop2 {
+/* .drop2 {
   width: 80rem;
   min-height: 20vh;
   margin: auto;
@@ -19,11 +19,11 @@
   justify-content: center;
   column-gap: 5rem;
   flex-wrap: wrap;
-  /* background-color: rgb(166, 221, 166); */
+  background-color: rgb(166, 221, 166);
   margin-top: 10px;
 
   border: 0.4rem solid rgb(166, 221, 166);
-}
+} */
 
 img {
   display: block;
