@@ -1,0 +1,83 @@
+.ask-div {
+  width: 80%;
+  margin: auto;
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 18px;
+}
+
+.ask-div img {
+  width: 180px;
+  height: 180px;
+}
+
+.pic-question {
+  color: #3d3b75;
+  font-weight: bolder;
+  font-size: 28px;
+}
+
+.yes-no-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  padding-top: 8px;
+}
+
+.yes-no-btns button {
+  font-size: 27px;
+  width: 90px;
+  outline: none;
+  padding: 5px;
+  cursor: pointer;
+  color: #3d3b75;
+  background-color: #ff7851;
+}
+
+.big {
+  font-size: 40px;
+  color: red;
+  font-weight: bold;
+}
+
+.happy-face {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 45px;
+  height: 45px;
+}
+
+.sad-face {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 45px;
+  height: 45px;
+}
+.Drag-Img {
+  position: relative;
+}
+
+.questionAndButtons {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.showed {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.disabled-view {
+  opacity: 0.5;
+  cursor: default !important;
+}

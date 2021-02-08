@@ -12,7 +12,6 @@ const ExamineeList = (props) => {
     { name: "Omklthom", timer: "07:08:19", date: "12.01.2021", score: "90" },
     { name: "Omklthom", timer: "07:08:19", date: "12.01.2021", score: "90" },
   ];
-  console.log("====>heloo");
 
   return (
     <div className="list-container">

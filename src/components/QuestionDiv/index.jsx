@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 
 const QuestionDiv = (props) => {
+  //states
   const [marked, setMarked] = useState("");
+
+  //functions
   const secondStep = () => {
     let question = props.question;
     // if stepCounter = 2, we should show the key word
@@ -12,7 +15,6 @@ const QuestionDiv = (props) => {
     if (props.stepsCounter == 2) {
       questionWordArr.split(" ").map((word) => {
         if (word == props.keyword) {
-          console.log("keyword!!!!", word);
           return (markedQuestion +=
             " " + `<span style='color:red'>${word}</span>`);
         } else {
@@ -20,7 +22,6 @@ const QuestionDiv = (props) => {
         }
       });
     }
-    console.log("Im colored :)", markedQuestion);
     setMarked(markedQuestion);
     qDiv.innerHTML = markedQuestion;
   };
