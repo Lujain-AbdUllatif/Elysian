@@ -32,7 +32,9 @@ export function TestIcon(props) {
 
 export function DeleteIcon(props) {
   return (
-    <IconContext.Provider value={{ className: props.className }}>
+    <IconContext.Provider
+      value={{ className: props.className, fontSize: "50px" }}
+    >
       <RiDeleteBin5Line />
     </IconContext.Provider>
   );
