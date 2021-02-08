@@ -1,11 +1,9 @@
 import React from "react";
 import "./style.css";
-import ScrollToTop from "../ScrollToTop";
 
 const Questions = (props) => {
   return (
-    <div>
-      <ScrollToTop questions={props.questions} />
+    <div className="questions-viewExercises">
       {props.questions.map(({ question }) => (
         <li>{question}</li>
       ))}

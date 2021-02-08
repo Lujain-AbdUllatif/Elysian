@@ -1,12 +1,14 @@
 .main-details-exercise {
   justify-content: center;
   background-color: #6aa5c45d;
-  width: 70%;
+  max-width: 70%;
   margin-bottom: 5px;
   margin-right: 150px;
   margin-left: 120px;
   padding: 40px;
+  margin: auto;
 }
+
 .main-images {
   display: flex;
   justify-content: space-between;
