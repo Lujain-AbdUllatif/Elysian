@@ -8,7 +8,6 @@
 
 - React.js
 - Node.js
-- Express.js
 
 ## Team
 
